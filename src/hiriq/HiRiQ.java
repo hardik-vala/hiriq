@@ -1,30 +1,28 @@
-public class tester {
+package hiriq;
 
-	public static void main(String[] args) {
 
-				class HiRiQ
-				{
-				//int is used to reduce storage to a minimum...
-				  public int config;
-				  public byte weight;
+class HiRiQ {
+	
+	//int is used to reduce storage to a minimum...
+	public int config;
+	public byte weight;
 
-				//initialize to one of 5 reachable START config n=0,1,2,3,4
-				HiRiQ(byte n)
-				  {
-				  if (n==0)
-				   {config=65536/2;weight=1;}
-				  else
-				    if (n==1)
-				     {config=1626;weight=6;}
-				    else
-				      if (n==2)
-				       {config=-1140868948; weight=10;}
-				      else
-				        if (n==3)
-				         {config=-411153748; weight=13;}
-				        else
-				         {config=-2147450879; weight=32;}
-				  }
+	//initialize to one of 5 reachable START config n=0,1,2,3,4
+	HiRiQ(byte n) {
+	  if (n==0)
+	   {config=65536/2;weight=1;}
+	  else
+	    if (n==1)
+	     {config=1626;weight=6;}
+	    else
+	      if (n==2)
+	       {config=-1140868948; weight=10;}
+	      else
+	        if (n==3)
+	         {config=-411153748; weight=13;}
+	        else
+	         {config=-2147450879; weight=32;}
+	}
 				
 				  boolean IsSolved()
 				  {
@@ -108,17 +106,3 @@ public class tester {
 
 				  }
 				}
-				
-				boolean[] B=new boolean[33];
-				HiRiQ W=new HiRiQ((byte) 0) ;
-				W.print(); System.out.println(W.IsSolved());
-				HiRiQ X=new HiRiQ((byte) 1) ;
-				X.print(); System.out.println(X.IsSolved());
-				HiRiQ Y=new HiRiQ((byte) 2) ;
-				Y.print(); System.out.println(Y.IsSolved());
-				HiRiQ Z=new HiRiQ((byte) 3) ;
-				Z.print(); System.out.println(Z.IsSolved());
-				HiRiQ V=new HiRiQ((byte) 4) ;
-				V.print(); System.out.println(V.IsSolved());
-			}
-		}
